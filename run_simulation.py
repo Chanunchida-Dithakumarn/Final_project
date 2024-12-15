@@ -3,7 +3,7 @@ import ball
 import random
 
 
-class BallSimulation:
+class Simulation:
     def __init__(self, color, num_balls):
         self.color = color
         self.num_balls = num_balls
@@ -49,5 +49,5 @@ class BallSimulation:
             turtle.update()
 
 
-# color_ball = BallSimulation('red', 5)
+# color_ball = Simulation('red', 5)
 # color_ball.run()
