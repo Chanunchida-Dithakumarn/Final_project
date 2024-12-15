@@ -5,12 +5,13 @@ class Player:
     def __init__(self):
         self.t = turtle.Turtle()
         self.t.penup()
-        self.t.speed(100)
+        self.t.speed(0)
         self.t.goto(0, 0)
         self.t.shape("turtle")
         self.t.shapesize(stretch_wid=1, stretch_len=1)
         self.t.color("darkgreen")
         self.t.setheading(90)
+        self.size = 1
 
     def move_up(self):
         if self.t.heading() != 90:
@@ -40,13 +41,18 @@ class Player:
         else:
             self.t.forward(15)
 
+    def increase_size(self):
+        self.size = self.size + 0.5
+        self.t.shapesize(stretch_wid=self.size, stretch_len=self.size)
 
-player = Player()
 
-turtle.onkey(player.move_up, "Up")
-turtle.onkey(player.move_down, "Down")
-turtle.onkey(player.move_left, "Left")
-turtle.onkey(player.move_right, "Right")
 
-turtle.listen()
-turtle.done()
+# player = Player()
+#
+# turtle.onkey(player.move_up, "Up")
+# turtle.onkey(player.move_down, "Down")
+# turtle.onkey(player.move_left, "Left")
+# turtle.onkey(player.move_right, "Right")
+#
+# turtle.listen()
+# turtle.done()
