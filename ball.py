@@ -1,4 +1,5 @@
 import turtle
+import math
 
 
 class Ball:
@@ -32,3 +33,14 @@ class Ball:
 
         if abs(self.y) > (self.canvas_height - self.size):
             self.vy = -self.vy
+
+    def check_hit_player(self, player):
+        player_x, player_y = player.t.xcor(), player.t.ycor()
+        player_size = 10
+        distance = math.sqrt((self.x - player_x) ** 2 + (self.y - player_y) ** 2)
+        if distance < self.size + player_size:
+            return True
+        else:
+            return False
+
+
