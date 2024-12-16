@@ -7,14 +7,16 @@ class Score:
         self.screen = turtle.Screen()
         self.t = turtle.Turtle()
         self.t.hideturtle()
+
+    def set_score(self, score):
+        self.score = score
+
+    def run(self):
+        self.t.clear()
         self.t.pencolor('mediumvioletred')
         self.t.penup()
         self.t.goto(330, 240)
         self.t.pendown()
-        self.run()
-
-    def run(self):
-        self.t.clear()
         self.t.write(f"{self.score}", font=("Verdana", 32, "normal"))
 
     def update(self, new_score):
