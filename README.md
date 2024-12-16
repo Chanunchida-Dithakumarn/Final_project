@@ -14,10 +14,10 @@
      To run the project, run the run_simulation.py.
 
 #### Usage
-     (https://youtu.be/WIqvrobOALw?si=PNLS134_d0zBXGP2)
-
+     https://youtu.be/WIqvrobOALw?si=PNLS134_d0zBXGP2
 
 #### Project design and implementation
-
+     
 
 #### Rate the project sophistication level
+     90 -- The game involving multipul ball objects colliding with turtle in different condition.
