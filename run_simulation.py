@@ -6,16 +6,14 @@ from player import Player
 
 
 class Simulation:
-    def __init__(self):  # self, color, num_balls
-        # self.color = color
-        # self.num_balls = num_balls
+    def __init__(self):
         turtle.speed(0)
         turtle.tracer(0)
         turtle.hideturtle()
         self.canvas_width = turtle.screensize()[0]
         self.canvas_height = turtle.screensize()[1]
         print(self.canvas_width, self.canvas_height)
-        self.ball_radius = 0.015 * self.canvas_width
+        self.ball_radius = 0.02 * self.canvas_width
         turtle.colormode(255)
         self.ball_list = []
 
@@ -24,7 +22,6 @@ class Simulation:
 
         self.g_over = False
         self.screen = turtle.Screen()
-        # self.gen_ball()
 
     def draw_border(self):
         turtle.penup()
@@ -39,7 +36,6 @@ class Simulation:
             turtle.left(90)
 
     def gen_ball(self):
-        # self.ball_list.clear()
         for i in range(5):
             color = random.choice(['salmon', 'cornflowerblue', 'gold'])
             x = random.uniform(-1 * self.canvas_width + self.ball_radius, self.canvas_width - self.ball_radius)
@@ -61,26 +57,15 @@ class Simulation:
         self.screen.onkey(self.player.move_down, "Down")
         self.screen.onkey(self.player.move_left, "Left")
         self.screen.onkey(self.player.move_right, "Right")
-
-        # dt = 0.7
-        # while True:
-        #     turtle.clear()
-        #     self.draw_border()
-        #     for i in range(self.num_balls):
-        #         self.ball_list[i].draw()
-        #         self.ball_list[i].move(dt)
-        #         self.ball_list[i].update_velocity()
-        #     turtle.update()
+        self.screen.onkey(self.player.move_up, "w")
+        self.screen.onkey(self.player.move_down, "s")
+        self.screen.onkey(self.player.move_left, "a")
+        self.screen.onkey(self.player.move_right, "d")
 
         self.gen_ball()
         dt = 1
-        # while True:
-        #     turtle.clear()
-        #     self.draw_border()
-        #     for ball in self.ball_list:
-        #         ball.draw()
-        #         ball.move(dt)
-        #         ball.update_velocity()
+
+        old_ball = 0
         while True:
             turtle.clear()
             self.draw_border()
@@ -115,9 +100,10 @@ class Simulation:
 
                     self.ball_list.remove(ball)
 
-                    if len(self.ball_list) <= 2:
+                    if len(self.ball_list) <= 2 + old_ball:
                         self.gen_ball()
                         self.player.increase_size()
+                        old_ball = old_ball + 2
                 turtle.update()
 
 
