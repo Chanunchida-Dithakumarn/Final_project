@@ -51,3 +51,11 @@ class Player:
     def increase_size(self):
         self.size = self.size + 0.3
         self.t.shapesize(stretch_wid=self.size, stretch_len=self.size)
+
+    def set_size(self, size):
+        self.size = size
+        self.t.shapesize(stretch_wid=size, stretch_len=size)
+
+    def set_position(self):
+        self.t.goto(0, 0)
+        self.t.setheading(90)
