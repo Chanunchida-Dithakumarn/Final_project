@@ -49,17 +49,5 @@ class Player:
                 self.t.forward(15)
 
     def increase_size(self):
-        self.size = self.size + 0.5
+        self.size = self.size + 0.3
         self.t.shapesize(stretch_wid=self.size, stretch_len=self.size)
-
-
-
-# player = Player()
-#
-# turtle.onkey(player.move_up, "Up")
-# turtle.onkey(player.move_down, "Down")
-# turtle.onkey(player.move_left, "Left")
-# turtle.onkey(player.move_right, "Right")
-#
-# turtle.listen()
-# turtle.done()
