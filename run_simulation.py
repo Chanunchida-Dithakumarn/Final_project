@@ -24,6 +24,7 @@ class Simulation:
         self.screen = turtle.Screen()
 
     def draw_border(self):
+        # draw border
         turtle.penup()
         turtle.goto(-self.canvas_width, -self.canvas_height)
         turtle.pensize(5)
