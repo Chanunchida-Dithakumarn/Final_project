@@ -9,7 +9,7 @@ class Player:
         self.t.goto(0, 0)
         self.t.shape("turtle")
         self.t.shapesize(stretch_wid=1, stretch_len=1)
-        self.t.color("darkgreen")
+        self.t.color("seagreen")
         self.t.setheading(90)
         self.size = 1
 
