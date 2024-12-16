@@ -1,6 +1,4 @@
 # Final_project
 
-Project's title
- --> Don't eat the poison candy
- -> Don't eat the poison candy
- > Don't eat the poison candy
+> Project's title
+Don't eat the poison candy
