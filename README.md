@@ -17,6 +17,7 @@
      https://youtu.be/WIqvrobOALw?si=PNLS134_d0zBXGP2
 
 #### Project design and implementation
+     https://docs.google.com/document/d/1_BhfMQRH-ILDhpvUs309QVDZ1FZanMW8XAAD9CW-2Cc/edit?usp=sharing
      
 
 #### Rate the project sophistication level
