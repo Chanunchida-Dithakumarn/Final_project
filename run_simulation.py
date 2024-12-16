@@ -51,23 +51,7 @@ class Simulation:
             vy = 10 * random.uniform(-1.0, 1.0)
             self.ball_list.append(Ball('dimgray', self.ball_radius, x, y, vx, vy))
 
-    # def before_game(self):
-    #     turtle.clear()
-    #     turtle.bgcolor('white')
-    #     turtle.penup()
-    #     turtle.goto(5, 35)
-    #     turtle.pencolor('darkslateblue')
-    #     turtle.write("Don't eat the poison candy", align='center', font=('Courier', 35, 'bold'))
-    #     turtle.penup()
-    #     turtle.pencolor('darkgray')
-    #     turtle.goto(0, -50)
-    #     turtle.write("Press SPACE to start the game", align='center', font=('Courier', 18, 'normal'))
-    #     # self.screen.listen()
-    #     # self.screen.onkey(turtle.bye, "space")
-    #     turtle.update()
-
     def run(self):
-        # self.before_game()
         self.screen.listen()
         self.screen.onkey(self.player.move_up, "Up")
         self.screen.onkey(self.player.move_down, "Down")
@@ -138,8 +122,5 @@ class Simulation:
 
 
 simulation = Simulation()
-# simulation.before_game()
-# turtle.onkey(simulation.run, "space")
-# turtle.listen()
 simulation.run()
 turtle.done()
