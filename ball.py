@@ -36,11 +36,8 @@ class Ball:
 
     def check_hit_player(self, player):
         player_x, player_y = player.t.xcor(), player.t.ycor()
-        player_size = 10
+        player_size = 8
         distance = math.sqrt((self.x - player_x) ** 2 + (self.y - player_y) ** 2)
-        if distance < self.size + player_size:
+        if distance < self.size + (player_size * player.size):
             return True
-        else:
-            return False
-
-
+        return False
